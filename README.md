@@ -14,7 +14,7 @@
 ![gcpproj](https://github.com/Gonsudev/gcp_taxi_analytics/assets/34743726/5c8dc1f2-83f7-4aaa-aee8-c023b4b5c80a)\
 
 ## Implementation
-1. Select the data, analyze it and create a ER diagram to model our data.
+1. Select the data, analyze it and create a ER diagram (Data Modeling) to model our data.
    
    ![taxi_datamodel](https://github.com/Gonsudev/gcp_taxi_analytics/assets/34743726/e132cec9-6a1c-4221-bf43-5b24f8999151)
 3. Create the transformation code in Jupyter Notebook, to be later used in our Mage AI transformer.
@@ -25,12 +25,18 @@
    
    ![image](https://github.com/Gonsudev/gcp_taxi_analytics/assets/34743726/e26aa284-aa97-4e52-960a-0eb21e6823f3)
 6. Execute the Mage AI command and start using Mage AI
+   Once we execute Mage, we see that it runs on ports 6791,6789. So we have to make sure we change the firewall settings to make 6791,6789 accessible to Mage.
    
    ![image](https://github.com/Gonsudev/gcp_taxi_analytics/assets/34743726/b6d7df77-e96d-4ff4-9d39-708b570d14bd)
-7. Once Logged in perform all the ETL using Data Loader, Transformer and Extractor to transform and load the data into GCP
+8. Once Logged in perform all the ETL using Data Loader, Transformer and Extractor to transform and load the data into GCP
+   * First task would be to go to GCP, API's and Services, Create service accounts.
+   * Use this Service Account in Mage's yaml file to make it accessible to GCP.
+   * Add the Bucket URL in Data Loader task.
+   * Next we use the transformation code to transform the data as we modelled it before and convert it into data dictionary using pandas.
+   * In the exporter, we de serialize the data and export it to Big Query to perform basic analytics on SQL
    
    ![image](https://github.com/Gonsudev/gcp_taxi_analytics/assets/34743726/35fbfbc0-c1ea-4153-b65e-64d3d51f9087)
-9. Log in to BigQuery and process the data in SQL editor.
+10. Log in to BigQuery and process the data in SQL editor.
     
    ![image](https://github.com/Gonsudev/gcp_taxi_analytics/assets/34743726/e2f87aed-a027-4c11-9044-e73c1de26c51)
 11. Perform Data Visualization using Looker studio.

@@ -39,6 +39,7 @@
 10. Log in to BigQuery and process the data in SQL editor.
     
    ![image](https://github.com/Gonsudev/gcp_taxi_analytics/assets/34743726/e2f87aed-a027-4c11-9044-e73c1de26c51)
+
 11. Perform Data Visualization using Looker studio.
     
    ![image](https://github.com/Gonsudev/gcp_taxi_analytics/assets/34743726/af01838c-9684-4dbe-91c9-83e74408d4e6)
